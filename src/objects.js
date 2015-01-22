@@ -42,13 +42,18 @@ function MessageLog(params) {
   this.user = params.user;
   this.countSent = 0;
   this.countRcvd = 0;
+  this.testLog = new Array(5);
+  this.testDirection = new Array(5);
   
   this.logMessage = function(messageText, direction) {
+    this.testLog[this.countSent] = messageText;
+    this.testDirection[this.countSent] = direction;
+    this.countSent++;
     return;
   }
 
   this.getSentMessage = function(n) {
-    return ('test');
+    return (this.testLog[n]);
   }
 
   this.totalSent = function() {
