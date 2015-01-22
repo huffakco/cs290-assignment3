@@ -3,7 +3,7 @@ Input:
 a: a whole, positive number
 
 Output:
-plus5: a number that is the sum of 5 and `a`
+plus5: a number that is the product of 5 and `a`
 asString: a string that is just `a` converted to a string
 yourNumberIs: a string that says "Your Number is `x`." where `x` is replaced by
 in input `a`
@@ -14,7 +14,9 @@ function variableModification(a) {
   var asString;
   var yourNumberIs;
   //your code here
-
+  plus5 = a + 5;
+  asString = '' + a;
+  yourNumberIs = 'Your Number is ' + a;
   //end your code
   return [plus5, asString, yourNumberIs, a];
 }
@@ -29,7 +31,14 @@ false otherwise
 */
 function isString(b) {
   //your code here
-  return undefined;
+  if (typeof(b) === 'string')
+  {
+    return(true);
+  }
+  else
+  {
+    return(false);
+  }
   //end your code
 }
 
@@ -42,6 +51,13 @@ return true if c is null, false otherwise
 */
 function isNull(c) {
   //your code here
-  return undefined;
+  if (c == null)
+  {
+    return(true);
+  }
+  else
+  {
+    return(false);
+  }
   //end your code
 }

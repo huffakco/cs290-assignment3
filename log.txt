@@ -1,1 +1,30 @@
-You log goes in this  file.
+Start: Mon Jan 19 17:30:0 2015 -0800
+End: Mon Jan 19 18:05:0 2015 -0800
+Tasks: Cloned assignment directory.  Set up github repository.
+
+Start: Tue Jan 20 06:53:12 2015 -0800
+End: Tue Jan 20 06:53:12 2015 -0800
+Tasks: Added initial code to variableModification script, 
+still fails test for missing declaration of variableModifications
+
+Start: Tue Jan 20 17:00:00 2015 -0800
+End: Tue Jan 20 17:49:35 2015 -0800
+Tasks: Completed code for variables.js.  Functions in variables.js are not 
+found so scripts not running.
+
+Start: Tue Jan 20 19:00:00 2015 -0800
+End: Tue Jan 20 21:42:57 2015 -0800
+Tasks: Watched videos, reviewed lecture text, re-cloned assignment directory
+to determine if the problem was from initial assignment.  Re-input code
+line by line.  Not sure how but fixed something that was causing the variables.js
+functions not to run through all the tests.  
+
+Start: Wed Jan 21 06:17:00 2015 -0800
+End: Wed Jan 21 06:55:22 2015 -0800
+Tasks: Start work on objects.js, incomplete.  Need more time reading material.
+
+Start: Wed Jan 21 19:00:06 2015 -0800
+End: Wed Jan 21 21:16:06 2015 -0800
+Tasks: Save current work, mostly prototypes of functions and 
+completed object file.  Trying to re-clone git directory and I overwrote
+something.  Saving off my files and starting the clone process over.
