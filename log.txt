@@ -23,8 +23,19 @@ Start: Wed Jan 21 06:17:00 2015 -0800
 End: Wed Jan 21 06:55:22 2015 -0800
 Tasks: Start work on objects.js, incomplete.  Need more time reading material.
 
-Start: Wed Jan 21 19:00:06 2015 -0800
-End: Wed Jan 21 21:16:06 2015 -0800
+Start: Wed Jan 21 19:30:00 2015 -0800
+End: Wed Jan 21 21:29:56 2015 -0800
 Tasks: Save current work, mostly prototypes of functions and 
 completed object file.  Trying to re-clone git directory and I overwrote
 something.  Saving off my files and starting the clone process over.
+Deleted github repository.
+
+Start: Thu Jan 22 06:17:00 2015 -0800
+End: Thu Jan 22 06:56:41 2015 -0800
+Tasks: Fixed undefined error in variables.js.  Added some more function
+prototypes to the code.  Fixed syntax errors.
+
+Start: Wed Jan 22 16:30:00 2015 -0800
+End: Wed Jan 22 17:19:27 2015 -0800
+Tasks: Fixed syntax errors. Worked on messageLog logic.  Still some test script
+failures.
