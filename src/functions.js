@@ -36,7 +36,7 @@ bar = function (doubleArray)
 {
   if (doubleArray !== undefined)
   {
-    for (var i = 0; i < doubleArray.length(); i++)
+    for (var i = 0; i < doubleArray.length; i++)
     {
       doubleArray[i] = 2 * doubleArray[i];
     }
@@ -84,8 +84,19 @@ function GitLog(hash, date, message) {
 
 //your code here
 function  parseGit(logArray) {
-  gitLog = new GitLog();
+  var gitLog = new Array();
+  /* values that will be updated for each log entry, for now default values */
+  var hash = 3782618;
+  var date = 'Wed, 7 Jan 2015 21:42:26 -0800';
+  var message = 'Initial commit';
   
+  /* doesn't see GitLog as an object */
+  for (var i=0; i < logArray.length; i++)
+  {  
+    
+    gitLog(i) = GitLog(hash, date, message);
+    
+  }
   return(gitLog);
 }
 

@@ -42,18 +42,54 @@ function MessageLog(params) {
   this.user = params.user;
   this.countSent = 0;
   this.countRcvd = 0;
+  this.total = 0;
+  this.nextOpen = 0;
   this.testLog = new Array(5);
   this.testDirection = new Array(5);
   
   this.logMessage = function(messageText, direction) {
-    this.testLog[this.countSent] = messageText;
-    this.testDirection[this.countSent] = direction;
-    this.countSent++;
+    if (this.nextOpen >= 5)
+    {
+      /* reset current pointer to start of queue */
+      this.nextOpen = 0;
+    }
+    /* only track valid directions */
+    if (direction >= 0 && direction <= 1)
+    {
+      if (this.total < 5)
+      {
+        this.total++; /* only keeping 5 then overwrites */
+      }
+      /* increment counters for directions */
+      if (direction !== 1)
+      {
+        this.countSent++;
+      }
+      else
+      {
+        this.countRcvd++;
+      }  
+      this.testLog[this.nextOpen] = messageText;
+      this.testDirection[this.nextOpen] = direction;
+      this.nextOpen++; /* increment the pointer */
+    }
+    else
+    {
+      /* what to do if bad direction? */
+    }
     return;
   }
 
   this.getSentMessage = function(n) {
-    return (this.testLog[n]);
+    if (n >= 0 && n < 5)
+    {
+      var ii = (this.nextOpen + 5 ) % 5;
+      return (this.testLog[ii] + this.testDirection[ii]);
+    }
+    else
+    {
+      return (null);
+    }
   }
 
   this.totalSent = function() {
