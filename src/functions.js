@@ -84,19 +84,22 @@ function GitLog(hash, date, message) {
 
 //your code here
 function  parseGit(logArray) {
-  var gitLog = new Array();
-  /* values that will be updated for each log entry, for now default values */
-  var hash = 3782618;
-  var date = 'Wed, 7 Jan 2015 21:42:26 -0800';
-  var message = 'Initial commit';
-  
-  /* doesn't see GitLog as an object */
-  for (var i=0; i < logArray.length; i++)
-  {  
+  var gitLog;
+  var tmpLogArray;
+  var tmpGit;
+  if (logArray !== undefined)
+  {
     
-    gitLog(i) = GitLog(hash, date, message);
-    
+    for (var i=0; i < logArray.length; i++)
+    {  
+      /* divide log string */
+      tmpLogArray = [logArray[i].split(' ')];
+      /* store new Git object */
+      tmpGit = new GitLog();
+      /*gitLog(i).push(GitLog(tmpLogArray[0]), tmpLogArray[1], tmpLogArray[2])); */
+    }
   }
+ 
   return(gitLog);
 }
 
