@@ -39,3 +39,14 @@ Start: Wed Jan 22 16:30:00 2015 -0800
 End: Wed Jan 22 17:19:27 2015 -0800
 Tasks: Fixed syntax errors. Worked on messageLog logic.  Still some test script
 failures.
+
+Start: Fri Jan 23 06:17:00 2015 -0800
+End: Fri Jan 23 06:57:12 2015 -0800
+Tasks: Work on parseGit but still incomplete.  Need more study on strings.
+
+Start: Fri Jan 23 18:27:40 2015 -0800
+End: Fri Jan 23 18:27:40 2015 -0800
+Tasks: Work on MessageLog from objects.js to debug final tests.  Divided into
+a sent and recvd circular buffer.  Added a function to calculate index.
+
+
