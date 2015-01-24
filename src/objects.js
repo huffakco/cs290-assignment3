@@ -70,6 +70,7 @@ function MessageLog(params) {
     else
     {
       /* what to do if bad direction? */
+      /* Decision: Nothing logged */
     }
     return;
   }
@@ -77,7 +78,7 @@ function MessageLog(params) {
   this.getSentMessage = function(n) {
     if (n >= 0 && n < 5)
     {
-      if (this.countSent > 5)
+      if (this.countSent >= 5)
       {
         return ("" + this.sentLog[this.calculateCurrOpen(this.countSent - 1 - n)] );
       }
@@ -88,7 +89,7 @@ function MessageLog(params) {
     }
     else
     {
-      return (null);
+      return ("SOMETHING WENT TERRIBLY WRONG, MESSAGE NO LONGER IN THE LOG!");
     }
   }
 
@@ -109,9 +110,20 @@ function MessageLog(params) {
 */
 //your code here
   MessageLog.prototype.lastReceivedMessage = function() {
-      return ("" + this.rcvdLog[this.calculateCurrOpen(this.countRcvd - 1)]);// +
-            /* " " + this.calculateCurrOpen(this.countSent - 1)); */
+      return ("" + this.rcvdLog[this.calculateCurrOpen(this.countRcvd - 1)]);
+   }
+  
+  
+/*** Add a method to the MessageLog prototype called systemReceived().
+* This method should return the total number of messages received for all
+* instances of message logs. So if you have logs A and B, A has received
+* 3 messages, B has received 8. systemReceived() should return 11. You
+* may need to do more than simply add a method to make this functionality
+* work. **/
+  MessageLog.prototype.systemReceived = function() {
+    return(this.countSent + this.countRcvd);
   }
+  
 //end your code
 
 /**

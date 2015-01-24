@@ -14,6 +14,7 @@
 
 //your code here
 function uselessFunction() {
+  /* exact code was also posted to the class Discussion */
   return (null);
 }
 //end your code
@@ -34,15 +35,26 @@ var barType = typeof bar;
 //your code here
 bar = function (doubleArray)
 {
+  /* fails if doubleArray doesn't actually contain data */
   if (doubleArray !== undefined)
   {
+    /* step through the array doubling each element */
     for (var i = 0; i < doubleArray.length; i++)
     {
-      doubleArray[i] = 2 * doubleArray[i];
+      if (typeof(doubleArray[i]) === 'number')
+      {
+        doubleArray[i] = 2 * doubleArray[i];
+      }
+      else
+      {
+        /* apparently non-numbers should not be doubled */
+        return false;
+      }
     }
   }
   else
   {
+    /* array not defined */
     return false;
   }
   return true;
@@ -84,19 +96,26 @@ function GitLog(hash, date, message) {
 
 //your code here
 function  parseGit(logArray) {
-  var gitLog;
-  var tmpLogArray;
-  var tmpGit;
+  var gitLog = new Array();  /* create an array to store git logs */
+  var tmpGitLog; /* interim GitLog */
+  /* process only if logArray has values */
   if (logArray !== undefined)
   {
-    
+    /* step through the array parsing each element */
+    /* similar to code posted on the Discussion */
     for (var i=0; i < logArray.length; i++)
     {  
-      /* divide log string */
-      tmpLogArray = [logArray[i].split(' ')];
-      /* store new Git object */
-      tmpGit = new GitLog();
-      /*gitLog(i).push(GitLog(tmpLogArray[0]), tmpLogArray[1], tmpLogArray[2])); */
+      /* create next log */
+      tmpGitLog = new GitLog;
+      /* divide logArray into pieces */
+      /* hash is fixed length, 7 characters */
+      tmpGitLog.hash = logArray[i].substring(0,7);
+      /* Message always starts with a " */
+      /* thanks to Michael Hoppes for hint in Discussion */
+      tmpGitLog.date = new Date(logArray[i].substring(8,logArray[i].indexOf("\"",8)-1));
+      tmpGitLog.message = logArray[i].substring(logArray[i].indexOf("\"",8)+1,logArray[i].length-1);
+      /* create new GitLog object and push into array */
+      gitLog.push(tmpGitLog); 
     }
   }
  
