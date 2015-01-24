@@ -49,4 +49,9 @@ End: Fri Jan 23 18:27:40 2015 -0800
 Tasks: Work on MessageLog from objects.js to debug final tests.  Divided into
 a sent and recvd circular buffer.  Added a function to calculate index.
 
-
+Start: Sat Jan 24 13:23:32 2015 -0800 
+End: Sat Jan 24 13:23:32 2015 -0800 
+Tasks: Added comments to objects and functions code.  Fixed errors in parseGit
+after reviewing on string functions. Added return message if n >= 5 on 
+MessageLog getSentMessage function.  Fixed undefined error in bar function.
+All tests pass.
