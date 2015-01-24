@@ -42,36 +42,30 @@ function MessageLog(params) {
   this.user = params.user;
   this.countSent = 0;
   this.countRcvd = 0;
-  this.total = 0;
-  this.nextOpen = 0;
-  this.testLog = new Array(5);
-  this.testDirection = new Array(5);
+  this.sentLog = new Array(5);
+  this.rcvdLog = new Array(5);
+  
+  this.calculateCurrOpen = function(currCount)
+  {
+     var ii = (currCount) % 5;
+     return(ii);
+  }
   
   this.logMessage = function(messageText, direction) {
-    if (this.nextOpen >= 5)
-    {
-      /* reset current pointer to start of queue */
-      this.nextOpen = 0;
-    }
     /* only track valid directions */
     if (direction >= 0 && direction <= 1)
     {
-      if (this.total < 5)
-      {
-        this.total++; /* only keeping 5 then overwrites */
-      }
       /* increment counters for directions */
       if (direction !== 1)
       {
+        this.sentLog[this.calculateCurrOpen(this.countSent)] = messageText;
         this.countSent++;
       }
       else
       {
+        this.rcvdLog[this.calculateCurrOpen(this.countRcvd)] = messageText;
         this.countRcvd++;
       }  
-      this.testLog[this.nextOpen] = messageText;
-      this.testDirection[this.nextOpen] = direction;
-      this.nextOpen++; /* increment the pointer */
     }
     else
     {
@@ -83,8 +77,14 @@ function MessageLog(params) {
   this.getSentMessage = function(n) {
     if (n >= 0 && n < 5)
     {
-      var ii = (this.nextOpen + 5 ) % 5;
-      return (this.testLog[ii] + this.testDirection[ii]);
+      if (this.countSent > 5)
+      {
+        return ("" + this.sentLog[this.calculateCurrOpen(this.countSent - 1 - n)] );
+      }
+      else
+      {
+        return ("" + this.sentLog[this.calculateCurrOpen(n)] );
+      }
     }
     else
     {
@@ -109,7 +109,8 @@ function MessageLog(params) {
 */
 //your code here
   MessageLog.prototype.lastReceivedMessage = function() {
-    return('test');
+      return ("" + this.rcvdLog[this.calculateCurrOpen(this.countRcvd - 1)]);// +
+            /* " " + this.calculateCurrOpen(this.countSent - 1)); */
   }
 //end your code
 
