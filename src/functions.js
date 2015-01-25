@@ -33,7 +33,7 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function (doubleArray)
+bar = function(doubleArray)
 {
   /* fails if doubleArray doesn't actually contain data */
   if (doubleArray !== undefined)
@@ -58,7 +58,7 @@ bar = function (doubleArray)
     return false;
   }
   return true;
-}
+};
 
 //end your code
 
@@ -95,7 +95,7 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function  parseGit(logArray) {
+function parseGit(logArray) {
   var gitLog = new Array();  /* create an array to store git logs */
   var tmpGitLog; /* interim GitLog */
   /* process only if logArray has values */
@@ -103,23 +103,25 @@ function  parseGit(logArray) {
   {
     /* step through the array parsing each element */
     /* similar to code posted on the Discussion */
-    for (var i=0; i < logArray.length; i++)
-    {  
+    for (var i = 0; i < logArray.length; i++)
+    {
       /* create next log */
       tmpGitLog = new GitLog;
       /* divide logArray into pieces */
       /* hash is fixed length, 7 characters */
-      tmpGitLog.hash = logArray[i].substring(0,7);
+      tmpGitLog.hash = logArray[i].substring(0, 7);
       /* Message always starts with a " */
       /* thanks to Michael Hoppes for hint in Discussion */
-      tmpGitLog.date = new Date(logArray[i].substring(8,logArray[i].indexOf("\"",8)-1));
-      tmpGitLog.message = logArray[i].substring(logArray[i].indexOf("\"",8)+1,logArray[i].length-1);
+      tmpGitLog.date =
+          new Date(logArray[i].substring(8, logArray[i].indexOf('\"', 8) - 1));
+      tmpGitLog.message =
+          logArray[i].substring(logArray[i].indexOf('\"', 8) + 1,
+                                logArray[i].length - 1);
       /* create new GitLog object and push into array */
-      gitLog.push(tmpGitLog); 
+      gitLog.push(tmpGitLog);
     }
   }
- 
-  return(gitLog);
+  return (gitLog);
 }
 
 

@@ -35,10 +35,10 @@ function isString(b) {
   {
     if (typeof(b) === 'string')
     {
-      return(true);
+      return (true);
     }
   }
-  return(false);
+  return (false);
   //end your code
 }
 
@@ -53,11 +53,11 @@ function isNull(c) {
   //your code here
   if ((c !== undefined) && (c == null))
   {
-    return(true);
+    return (true);
   }
   else
   {
-    return(false);
+    return (false);
   }
   //end your code
 }

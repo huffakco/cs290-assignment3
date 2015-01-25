@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
-  return ({type:'Goldfish',brand:'Pepperidge Farm',flavor:'Cheddar',count:2000}); //Modify ONLY this line
+  return ({type: 'Goldfish', brand: 'Pepperidge Farm', flavor: 'Cheddar', count: 2000}); //Modify ONLY this line
   //end your code
 }
 
@@ -38,19 +38,19 @@ function returnObjectLiteral() {
 */
 
 //your code here
-function MessageLog(params) {
-  this.user = params.user;
+function MessageLog(user) {
+  this.user = user;
   this.countSent = 0;
   this.countRcvd = 0;
   this.sentLog = new Array(5);
   this.rcvdLog = new Array(5);
-  
+
   this.calculateCurrOpen = function(currCount)
   {
      var ii = (currCount) % 5;
-     return(ii);
-  }
-  
+     return (ii);
+  };
+
   this.logMessage = function(messageText, direction) {
     /* only track valid directions */
     if (direction >= 0 && direction <= 1)
@@ -65,7 +65,7 @@ function MessageLog(params) {
       {
         this.rcvdLog[this.calculateCurrOpen(this.countRcvd)] = messageText;
         this.countRcvd++;
-      }  
+      }
     }
     else
     {
@@ -73,33 +73,34 @@ function MessageLog(params) {
       /* Decision: Nothing logged */
     }
     return;
-  }
+  };
 
   this.getSentMessage = function(n) {
     if (n >= 0 && n < 5)
     {
       if (this.countSent >= 5)
       {
-        return ("" + this.sentLog[this.calculateCurrOpen(this.countSent - 1 - n)] );
+        return ('' +
+              this.sentLog[this.calculateCurrOpen(this.countSent - 1 - n)]);
       }
       else
       {
-        return ("" + this.sentLog[this.calculateCurrOpen(n)] );
+        return ('' + this.sentLog[this.calculateCurrOpen(n)]);
       }
     }
     else
     {
-      return ("SOMETHING WENT TERRIBLY WRONG, MESSAGE NO LONGER IN THE LOG!");
+      return ('SOMETHING WENT TERRIBLY WRONG, MESSAGE NO LONGER IN THE LOG!');
     }
-  }
+  };
 
   this.totalSent = function() {
-    return(this.countSent);
-  }
+    return (this.countSent);
+  };
 
   this.totalReceived = function() {
-    return(this.countRcvd);
-  }
+    return (this.countRcvd);
+  };
 }
 //end your code
 
@@ -110,10 +111,9 @@ function MessageLog(params) {
 */
 //your code here
   MessageLog.prototype.lastReceivedMessage = function() {
-      return ("" + this.rcvdLog[this.calculateCurrOpen(this.countRcvd - 1)]);
-   }
-  
-  
+      return ('' + this.rcvdLog[this.calculateCurrOpen(this.countRcvd - 1)]);
+   };
+
 /*** Add a method to the MessageLog prototype called systemReceived().
 * This method should return the total number of messages received for all
 * instances of message logs. So if you have logs A and B, A has received
@@ -121,9 +121,9 @@ function MessageLog(params) {
 * may need to do more than simply add a method to make this functionality
 * work. **/
   MessageLog.prototype.systemReceived = function() {
-    return(this.countSent + this.countRcvd);
-  }
-  
+    return (this.countSent + this.countRcvd);
+  };
+
 //end your code
 
 /**
@@ -134,7 +134,7 @@ function MessageLog(params) {
 
 //your code here
   myLog = new MessageLog('BlackHatGuy');
-  myLog.logMessage('foo',1);
-  myLog.logMessage('bar',1);
-  myLog.logMessage('baz',1);
+  myLog.logMessage('foo', 1);
+  myLog.logMessage('bar', 1);
+  myLog.logMessage('baz', 1);
 //end your code
