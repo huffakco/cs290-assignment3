@@ -64,3 +64,10 @@ and variables files.  Corrected errors.
 Start: Sat Jan 24 22:51:00 2015 -0800
 End: Sat Jan 24 23:16:08 2015 -0800
 Tasks: Fixed too long line in objects.js
+
+Start: Sun Jan 25 20:00:00 2015 -0800
+End: Sun Jan 25 20:58:22 2015 -0800
+Tasks: After re-reading the systemReceived requirements again and more study on 
+Object properties, added a systemLog variable and SystemLog object to track
+the count.  Created method in message log to get the result.  Added to message log
+incrementing the total.  Takes advantage of the variable scope features in javascript.
