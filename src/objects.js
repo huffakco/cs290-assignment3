@@ -68,6 +68,7 @@ function MessageLog(user) {
       {
         this.rcvdLog[this.calculateCurrOpen(this.countRcvd)] = messageText;
         this.countRcvd++;
+        systemLog.totalCountRcvd(1);
       }
     }
     else
@@ -123,8 +124,21 @@ function MessageLog(user) {
 * 3 messages, B has received 8. systemReceived() should return 11. You
 * may need to do more than simply add a method to make this functionality
 * work. **/
+  /* Define an object to hold the counter for total messages received */
+  function SystemLog() {
+    this.rcvdCounter = 0;
+    this.totalCountRcvd = function (num) {
+      this.rcvdCounter += num;
+      return (this.rcvdCounter);
+    }
+  }
+
+  /* Make an instance of that object */
+  systemLog = new SystemLog();
+  
+  /* add method to MessageLog prototype to get total messages received */
   MessageLog.prototype.systemReceived = function() {
-    return (this.countSent + this.countRcvd);
+    return (systemLog.totalCountRcvd(0));
   };
 
 //end your code
