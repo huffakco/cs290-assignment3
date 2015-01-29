@@ -71,3 +71,22 @@ Tasks: After re-reading the systemReceived requirements again and more study on
 Object properties, added a systemLog variable and SystemLog object to track
 the count.  Created method in message log to get the result.  Added to message log
 incrementing the total.  Takes advantage of the variable scope features in javascript.
+
+#Begin Part 2
+
+Start: Mon Jan 26 20:30:00 2015 -0800
+End: Mon Jan 26 22:00:00 2015 -0800
+Tasks: Reading, watching videos, create tests files for local storage,
+no progress on actual assignment
+
+Start: Tue Jan 27 20:30:00 2015 -0800
+End: Tue Jan 27 22:30:00 2015 -0800
+Tasks: More review of materials, create tests files for Gist requests
+no progress on actual assignment
+
+Start: Wed Jan 28 20:30:00 2015 -0800
+End: Wed Jan 28 21:36:19 2015 -0800
+Tasks: Generate a test file with mostly copied code.  Save off Gist request response
+for further review.  Tested JSON.parse function
+
+
