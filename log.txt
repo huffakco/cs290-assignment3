@@ -89,4 +89,15 @@ End: Wed Jan 28 21:36:19 2015 -0800
 Tasks: Generate a test file with mostly copied code.  Save off Gist request response
 for further review.  Tested JSON.parse function
 
+Start: Thu Jan 29 06:17:00 2015 -0800
+End: Thu Jan 29 06:55:17 2015 -0800
+Tasks: Outline assignment requirements, set up git folder and copy baseline style
+sheet from last assignment
 
+Start: Thu Jan 29 16:30:00 2015 -0800
+End: Thu Jan 29 17:31:51 2015 -0800
+Tasks: Added table generation, HTML object, object to contain list of HTML objects
+
+Start: Thu Jan 29 21:00:00 2015 -0800
+End: Thu Jan 29 22:20:43 2015 -0800
+Tasks: Testing on gist requests and generating tables
