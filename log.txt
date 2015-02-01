@@ -125,6 +125,13 @@ End: Sun Feb 1 02:41:46 2015 -0800
 Tasks: Allows saving to favorites and removing favorites.  Added links to open href.
 Mostly complete. Added some styling.
 
+Start: Sun Feb 1 09:00:00 2015 -0800
+End: Sun Feb 1 12:38:08 2015 -0800
+Tasks: Fixed removing favorites from Gist list and some refactoring.
+
+Start: Sun Feb 1 12:38:08 2015 -0800
+End: Sun Feb 1 13:26:35 2015 -0800
+Tasks: Fixed validation errors and initial start up with no local storage.
 
 
 
