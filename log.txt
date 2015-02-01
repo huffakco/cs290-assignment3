@@ -114,3 +114,18 @@ Start: Fri Jan 30 19:30:00 2015 -0800
 End: Sat Jan 31 00:14:16 2015 -0800
 Tasks: Changed to drop down list and checkboxes for input, save made more robust,
 organized Gist requests, still not working (network error)
+
+Start: Sat Jan 31 11:30:00 2015 -0800
+End: Sat Jan 31 16:58:18 2015 -0800
+Tasks: Fixed errors with the AJAX request.  Setup table filter.  Added checkbox 
+to the table. Worked on linking checkbox to functions.
+
+Start: Sat Jan 31 22:00:00 2015 -0800
+End: Sun Feb 1 02:41:46 2015 -0800
+Tasks: Allows saving to favorites and removing favorites.  Added links to open href.
+Mostly complete. Added some styling.
+
+
+
+
+
